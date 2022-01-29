@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}datAI{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block page_content %}
+<div class="jumbotron jumbotron-custom text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>
+                    Deep Learning
+                </h1>
+                A overview of deep learning topics.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="tabs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 ">
+                <nav>
+                    <div class="nav nav-tabs nav-link-tut nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link nav-link-tut active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                            role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                        <a class="nav-item nav-link nav-link-tut" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                            role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                        <a class="nav-item nav-link nav-link-tut" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                            role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                        <a class="nav-item nav-link nav-link-tut" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
+                            aria-controls="nav-about" aria-selected="false">About</a>
+                    </div>
+                </nav>
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        Et et consecte3242tur ipsum labore excepteur est proident excepteur ad vel it occaecat qui minim
+                        occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit
+                        dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse
+                        consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod
+                        tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non
+                        adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat
+                        ex.
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim
+                        occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit
+                        dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse
+                        consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod
+                        tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non
+                        adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat
+                        ex.
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim
+                        occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit
+                        dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse
+                        consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod
+                        tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non
+                        adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat
+                        ex.
+                    </div>
+                    <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                        Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim
+                        occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit
+                        dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse
+                        consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod
+                        tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non
+                        adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat
+                        ex.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div>
+    <h1>
+        The role of the derivative of a sigmoid function in neural networks
+    </h1>
+
+    <p>
+        The use of derivatives in neural networks is for the training process called backpropagation.
+        This technique uses gradient descent in order to find an optimal set of model parameters in order
+        to minimize a loss function. In your example you must use the derivative of a sigmoid because
+        that is the activation that your individual neurons are using.
+    </p>
+
+    <h2>
+        The loss function
+    </h2>
+
+    <p>
+        The essence of machine learning is to optimize a cost function
+        such that we can either minimize or maximize some target function.
+        This is typically called the loss or cost funtion. We typically want to minimize this function.
+        The cost function, C, associates some penalty based on the resulting errors when passing data through your model
+        as a function of the model parameters.
+        </br>
+        </br>
+        Let's look at the example where we try to label whether an image contains a cat or a dog.
+        If we have a perfect model, we can give the model a picture and it will tell us if it is a cat or a dog.
+        However, no model is perfect and it will make mistakes.
+        </br>
+        </br>
+        When we train our model to be able to infer meaning from input data we want to minimize the amount of mistakes
+        it makes.
+        So we use a training set, this data contains a lot of pictures of dogs and cats and we have the ground truth
+        label
+        associated with that image. Each time we run a training iteration of the model we calculate the cost (the amount
+        of mistakes)
+        of the model. We will want to minimize this cost.
+        </br>
+        </br>
+        Many cost functions exist each serving their own purpose. A common cost function that is used is the quadratic
+        cost
+        which is defined as
+        </br>
+        $$C= \frac{1}{N} \sum_{i=0}^N (\hat{y}−y)^2.$$
+        </br>
+        This is the square of the difference between the predicted label and the ground truth label for the N
+        images that we trained over. We will want to minimize this in some way.
+    </p>
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}

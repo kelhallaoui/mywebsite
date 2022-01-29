@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand navbar-mainbg-custom">
+
+    <div class="container-fluid">
+
+        <div>
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', path='/images/nn.png') }}" width="40" height="40" href="/"> </img>
+                datAI
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+
+            <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-topnav active" aria-current="page" href="/">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-topnav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"> Tutorials </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="/tutorials">All</a></li>
+                        <li><a class="dropdown-item" href="/tutorials/feature_reduction">Feature Reduction</a></li>
+                        <li><a class="dropdown-item" href="/tutorials/deep_learning">Deep Learning</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-link-topnav" href="/accordion">Wiki Maps</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

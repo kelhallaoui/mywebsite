@@ -1,0 +1,15 @@
+[Unit]
+Description=Website server # A description 
+
+[Service]
+Type=simple
+User=root # A username to run this service as
+
+# See comments below for more information
+ExecStart=/usr/bin/mywebsite
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
